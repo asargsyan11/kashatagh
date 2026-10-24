@@ -8,8 +8,9 @@ export type SectionEntry = {
 };
 
 export const sections: SectionEntry[] = [
-  { slug: 'geography', group: 'history', title: 'Աշխարհագրական դիրք', coverImage: '/placeholder.jpg', caption: 'Գետեր, սարեր' },
-  { slug: 'history', group: 'history', title: 'Պատմություն', coverImage: '/placeholder.jpg', caption: 'Համառոտ նկարագրություն' },
+  { slug: 'geography', group: 'history', title: 'Աշխարհագրական դիրք', coverImage: '/geo.jpg', caption: 'Գետեր, լեռներ, բնակավայրեր' },
+  { slug: 'history', group: 'history', title: 'Պատմական ակնարկ', coverImage: '/history.jpg', caption: 'Հնագույն շրջանից մինչև 2023 թվական' },
+  { slug: 'history/sources', group: 'history', title: 'Աղահեճք-Քաշաթաղի մասին հիշատակումները պատմական աղբյուրներում', coverImage: '/placeholder.jpg', caption: 'Անանիա Շիրակացուց մինչև 20-րդ դարի մամուլ' },
   { slug: 'liberation-movement', group: 'history', title: 'Արցախյան շարժում և ազատագրում', coverImage: '/placeholder.jpg', caption: 'Համառոտ նկարագրություն' },
   { slug: 'monuments', group: 'monuments', title: 'Հուշարձաններ', coverImage: '/placeholder.jpg', caption: 'Պատմահնագիտական և բնական' },
   { slug: 'resettlement', group: 'people', title: 'Վերաբնակեցում', coverImage: '/placeholder.jpg', caption: 'Պետական կառույցներ, կրթություն, առողջապահություն, մշակույթ, գյուղատնտեսություն, քաղաքաշինություն, առևտուր, հասարակական կազմակերպություններ' },

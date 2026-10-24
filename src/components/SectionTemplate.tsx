@@ -1,7 +1,21 @@
 import NavBar from '@/components/NavBar';
 
+// Keys match the nav groups; labels are what visitors see in the eyebrow.
+export const sectionGroups = {
+  history: 'Պատմություն',
+  monuments: 'Հուշարձաններ',
+  liberation: 'Արցախյան շարժում',
+  frontline: 'Առաջնագիծ',
+  people: 'Ժողովուրդ',
+  media: 'Մեդիա',
+  about: 'Մեր մասին',
+  store: 'Խանութ',
+} as const;
+
+export type SectionGroup = keyof typeof sectionGroups;
+
 type SectionTemplateProps = {
-  group: string;
+  group: SectionGroup;
   title: string;
   caption: string;
   wide?: boolean;
@@ -15,7 +29,7 @@ export default function SectionTemplate({ group, title, caption, wide, children 
 
       <section className="section-hero">
         <div className="section-hero-inner">
-          <div className="eyebrow">{group}</div>
+          <div className="eyebrow">{sectionGroups[group]}</div>
           <h1>{title}</h1>
           <p className="section-caption">{caption}</p>
         </div>

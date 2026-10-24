@@ -1,24 +1,28 @@
+import AreaList from '@/components/AreaList';
+import ArticleBody from '@/components/ArticleBody';
 import SectionTemplate from '@/components/SectionTemplate';
+import { geographyBlocks } from '@/content/geography';
+
+const facts = [
+  { value: '3377 կմ²', label: 'մակերես' },
+  { value: '2220 մ', label: 'Հոչանցասար՝ ամենաբարձր գագաթը' },
+  { value: '100+', label: 'բնակավայր՝ 54 համայնքում (2020)' },
+  { value: '11 000+', label: 'բնակիչ (2015)' },
+];
 
 export default function GeographyPage() {
   return (
-    <SectionTemplate group="Աշխարհագրություն" title="Աշխարհագրական դիրք" caption="Համառոտ նկարագրություն">
-      <div className="article-body">
-        <p className="article-lead">
-          [Ներածական պարբերություն՝ տարածաշրջանի աշխարհագրական դիրքի մասին կավելացվի այստեղ:]
-        </p>
-
-        <p>[ՉԳԻՏԵՄ ԻՆՉ-ՈՐ ԲԱՆԵՐ ԿԳՐԵՆՔ ԷԼԻ]</p>
-        <p>[ՍՏԵՂ ԷԼ ԴՐԱՆԻՑ]</p>
-
-        <figure className="article-figure">
-          <img src="/geo.jpg" alt="Աշխարհագրական դիրք" />
-          <figcaption className="figure-caption">[Լուսանկարի ենթագիր և տարեթիվ]</figcaption>
-        </figure>
-
-        <p>[ՍՏԵՂ ԷԼ ԻՆՉ-ՈՐ ԲԱՆԵՐ ԼԱԼԱՅԻ ԼՈՒԼՈՒԻ]</p>
-        <p>[Եզրափակիչ պարբերություն:]</p>
-      </div>
+    <SectionTemplate group="history" title="Աշխարհագրական դիրք" caption="Գետեր, լեռներ, բնակավայրեր">
+      <dl className="fact-strip">
+        {facts.map((f) => (
+          <div key={f.label}>
+            <dt>{f.label}</dt>
+            <dd>{f.value}</dd>
+          </div>
+        ))}
+      </dl>
+      <ArticleBody blocks={geographyBlocks} />
+      <AreaList />
     </SectionTemplate>
   );
 }

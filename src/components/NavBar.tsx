@@ -40,7 +40,8 @@ export default function NavBar() {
           </button>
           <div className={`dropdown${openMenu === 'history' ? ' open' : ''}`}>
             <a href="/geography" onClick={close}>Աշխարհագրական դիրք</a>
-            <a href="/history" onClick={close}>Պատմություն</a>
+            <a href="/history" onClick={close}>Պատմական ակնարկ</a>
+            <a href="/history/sources" onClick={close}>Հիշատակումներ պատմական աղբյուրներում</a>
           </div>
         </div>
 

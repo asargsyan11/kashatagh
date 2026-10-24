@@ -11,7 +11,7 @@ const photos = [
 
 export default function FrontlinePage() {
   return (
-    <SectionTemplate group="history" title="Առաջնագիծ" caption="2014, 2016, 2020" wide>
+    <SectionTemplate group="frontline" title="Առաջնագիծ" caption="2014, 2016, 2020" wide>
       <div className="gallery-grid">
         {photos.map((photo, i) => (
           <div className="gallery-item" key={i}>

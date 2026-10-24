@@ -1,26 +1,20 @@
+import Link from 'next/link';
+
+import ArticleBody, { ArticleToc } from '@/components/ArticleBody';
 import SectionTemplate from '@/components/SectionTemplate';
+import { historyBlocks } from '@/content/history';
+import { historicalSourcesTitle } from '@/content/historicalSources';
 
 export default function HistoryPage() {
   return (
-    <SectionTemplate group="Պատմություն" title="Պատմություն" caption="Համառոտ նկարագրություն">
-      <div className="article-body">
-        <p className="article-lead">
-          [Ներածական պարբերություն՝ տարածաշրջանի պատմության մասին կավելացվի ստեղ:]
-        </p>
+    <SectionTemplate group="history" title="Պատմական ակնարկ" caption="Հնագույն շրջանից մինչև 2023 թվական">
+      <ArticleToc blocks={historyBlocks} label="Ժամանակաշրջաններ" />
+      <ArticleBody blocks={historyBlocks} />
 
-        <p>[Պարբերություն վաղ պատմության մասին:]</p>
-
-        <figure className="article-figure">
-          <img src="/history.jpg" alt="Պատմություն" />
-          <figcaption className="figure-caption">[Լուսանկարի ենթագիր և տարեթիվ]</figcaption>
-        </figure>
-
-        <p>[INFO INFO INFO]</p>
-
-        <p className="pull">[Մեջբերում:]</p>
-
-        <p>[Եզրափակիչ պարբերություն]</p>
-      </div>
+      <Link href="/history/sources" className="article-next">
+        <span className="article-next-label">Կարդալ նաև</span>
+        <span className="article-next-title">{historicalSourcesTitle}</span>
+      </Link>
     </SectionTemplate>
   );
 }
